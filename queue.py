@@ -99,7 +99,7 @@ class Queue:
         return self.input.getSize() + self.output.getSize()
 
     def isEmpty(self):
-        return self.getSize == 0
+        return self.getSize() == 0
 
 if __name__ == '__main__':
         testQueue = Queue()
@@ -109,6 +109,10 @@ if __name__ == '__main__':
         print(testQueue.getSize())
         print()
 
+        print("now i'm going to isEmpty(), it should be True:")
+        print(testQueue.isEmpty())
+        print()
+
         print("now i'm going to peak with an empty queue, it should show that the queue is empty:")
         print(testQueue.peek())
         print()
@@ -116,6 +120,10 @@ if __name__ == '__main__':
         print("enqueueing two Nodes to queue, FIRST --> hello, LAST --> there")
         testQueue.enqueue("hello")
         testQueue.enqueue("there")
+        print()
+
+        print("now i'm going to isEmpty(), it should be False:")
+        print(testQueue.isEmpty())
         print()
 
         print("now i'm going to peak, it should be 'hello':")
